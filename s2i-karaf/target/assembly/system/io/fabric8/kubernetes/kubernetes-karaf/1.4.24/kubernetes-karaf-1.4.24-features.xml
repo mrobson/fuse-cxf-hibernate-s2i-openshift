@@ -1,0 +1,45 @@
+<!--
+
+    Copyright (C) 2015 Red Hat, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="kuberntes-features-1.4.24">
+
+  <feature name="kubernetes-client" description="Fabric8 Kubernetes Client" version="1.4.24">
+    <bundle dependency='true'>mvn:javax.validation/validation-api/1.1.0.Final</bundle>
+    <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.7.5</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.7.5</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/1.17</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.generex/1.0.1_1</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.automaton/1.11-8_1</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/1.9.0_1</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/3.4.1_1</bundle>
+    <bundle>mvn:io.fabric8/kubernetes-model/1.0.63</bundle>
+    <bundle>mvn:io.fabric8/zjsonpatch/0.2.3</bundle>
+    <bundle>mvn:io.fabric8/kubernetes-client/1.4.24/jar/bundle</bundle>
+  </feature>
+
+  <feature name="openshift-client" description="Fabric8 Openshift Client" version="1.4.24">
+    <feature>kubernetes-client</feature>
+    <bundle>mvn:io.fabric8/openshift-client/1.4.24/jar/bundle</bundle>
+  </feature>
+
+</features>
