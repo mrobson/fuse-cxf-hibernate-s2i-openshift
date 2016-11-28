@@ -4,7 +4,7 @@ Author: Matt Robson
 
 Technologies: CXF, Hibernate, Openshift, Docker, Karaf
 
-Product: Fuse 6.3, Openshift 3.3, Fuse Integration Service(FIS) 2.0
+Product: Openshift 3.3, Fuse Integration Service(FIS) 2.0
 
 Breakdown
 ---------
@@ -12,23 +12,18 @@ This code example shows how to use FIS 2.0 Source 2 Image to produce a Karaf bas
 
 For more information see:
 
-https://access.redhat.com/site/documentation/JBoss_Fuse/ for more information about using JBoss Fuse
-
-https://access.redhat.com/documentation/en/red-hat-xpaas/version-0/red-hat-xpaas-fuse-integration-services-image/ for more information on JBoss Fuse Integration Services
-
-https://access.redhat.com/documentation/en/openshift-container-platform/ for more information about Openshift Container Platform
-
-https://access.redhat.com/documentation/en/red-hat-container-development-kit/ for more information about the Openshift Container Development Kit
+* https://access.redhat.com/site/documentation/JBoss_Fuse/ for more information about using JBoss Fuse
+* https://access.redhat.com/documentation/en/red-hat-xpaas/version-0/red-hat-xpaas-fuse-integration-services-image/ for more information on JBoss Fuse Integration Services
+* https://access.redhat.com/documentation/en/openshift-container-platform/ for more information about Openshift Container Platform
+* https://access.redhat.com/documentation/en/red-hat-container-development-kit/ for more information about the Openshift Container Development Kit
 
 System Requirements
 -------------------
 Before building and running this quick start you need:
 
-Maven 3.3 or higher
-
-Java 1.8
-
-Openshift Container Platform 3.3
+* Openshift Container Platform 3.3 or Openshift Container Development Kit (CDK) 3.3
+* Maven 3.3 or higher
+* Java 1.8
 
 Build and Deploy
 ----------------
