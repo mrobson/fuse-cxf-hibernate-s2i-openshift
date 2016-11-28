@@ -66,6 +66,7 @@
     {
       "name": "ARTIFACT_DIR",
       "displayName": "Maven build directory",
+      "value": "s2i-karaf/target/",
       "description": "Directory of the artifact to be built, e.g. for multi-module builds."
     },
     {
