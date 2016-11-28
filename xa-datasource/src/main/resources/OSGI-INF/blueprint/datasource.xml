@@ -17,20 +17,24 @@
  * limitations under the License.
  */ 
  -->
-<blueprint xmlns="https://osgi.org/xmlns/blueprint/v1.0.0"
+<!--blueprint xmlns="https://osgi.org/xmlns/blueprint/v1.0.0"
 xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"-->
+
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.5.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0
-http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
-    <cm:property-placeholder id="org.mrobson.example.placeholders" persistent-id="org.mrobson.example.hibernatetx.xa-datasource">
-        <cm:default-properties>
-            <cm:property name="datasource.url" value="jdbc:oracle:thin:@localhost:1521/XE"/>
-            <cm:property name="datasource.username" value="productconfig"/>
-            <cm:property name="datasource.password" value="productconfig123"/>
-        </cm:default-properties>
-    </cm:property-placeholder>
+https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+http://camel.apache.org/schema/blueprint
+http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+    <ext:property-placeholder evaluator="fabric8" id="fabric8PropertyPlaceholder"/>
+
     <bean class="org.h2.jdbcx.JdbcDataSource" id="dataSourceMEM">
-        <property name="URL" value="jdbc:h2:mem:dataBase;DB_CLOSE_DELAY=-1"/>
+        <property name="URL" value="jdbc:h2:mem:dataBase;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=3"/>
         <property name="user" value="sa"/>
         <property name="password" value=""/>
     </bean>
