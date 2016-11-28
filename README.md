@@ -25,7 +25,9 @@ System Requirements
 Before building and running this quick start you need:
 
 Maven 3.3 or higher
+
 Java 1.8
+
 Openshift Container Platform 3.3
 
 Build and Deploy
