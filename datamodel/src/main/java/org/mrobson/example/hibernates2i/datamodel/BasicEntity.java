@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mrobson.example.hibernatetx.datamodel;
+package org.mrobson.example.hibernates2i.datamodel;
 
 import java.util.Date;
 

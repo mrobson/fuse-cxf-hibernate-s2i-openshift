@@ -47,7 +47,7 @@
 		<module>xa-datasource</module>
 		<module>datamodel</module>
 		<module>cxfhibernate</module>
-		<module>s2i-karaf</module>
+		<module>hibernatecxf-s2ikaraf</module>
 	</modules>
 
 	<dependencyManagement>

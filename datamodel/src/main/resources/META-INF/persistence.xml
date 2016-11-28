@@ -21,21 +21,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
 	http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="cxfhibernate" transaction-type="JTA">
+	<persistence-unit name="cxfhibernates2i" transaction-type="JTA">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<!--jta-data-source>osgi:service/jdbc/Hibernate_XADS</jta-data-source>
 		<non-jta-data-source>osgi:service/jdbc/NonXA_DS</non-jta-data-source-->
 		<jta-data-source>osgi:service/jdbc/h2memory</jta-data-source>
 		<non-jta-data-source>osgi:service/jdbc/h2memory</non-jta-data-source>
-		<class>org.mrobson.example.hibernatetx.datamodel.Person</class>
-		<class>org.mrobson.example.hibernatetx.datamodel.Address</class>
-		<class>org.mrobson.example.hibernatetx.datamodel.EntityCommons</class>
+		<class>org.mrobson.example.hibernates2i.datamodel.Person</class>
+		<class>org.mrobson.example.hibernates2i.datamodel.Address</class>
+		<class>org.mrobson.example.hibernates2i.datamodel.EntityCommons</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
-			<!--property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.connection.pool_size" value="25" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" /-->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.connection.pool_size" value="25" />

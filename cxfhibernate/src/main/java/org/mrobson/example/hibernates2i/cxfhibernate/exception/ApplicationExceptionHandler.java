@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mrobson.example.hibernatetx.cxfhibernate.exception;
+package org.mrobson.example.hibernates2i.cxfhibernate.exception;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

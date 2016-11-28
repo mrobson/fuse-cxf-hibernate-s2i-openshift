@@ -16,48 +16,44 @@
  * limitations under the License.
 -->
 <blueprint default-activation="eager"
-           xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
-           xmlns:cxf="http://cxf.apache.org/blueprint/core"
-           xmlns:camel="http://camel.apache.org/schema/blueprint"
-           xmlns:camel-cxf="http://camel.apache.org/schema/blueprint/cxf"
-           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
-           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-           xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
-           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
-             http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
-             
-	<jaxrs:server id="hibernatetx" address="/hibernatetx/">
-		<jaxrs:serviceBeans>
-			<ref component-id="personRestService" />
-		</jaxrs:serviceBeans>
-		<jaxrs:providers>
-			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
-      		<bean id="applicationException" class="org.mrobson.example.hibernatetx.cxfhibernate.exception.ApplicationExceptionHandler"/>
-		</jaxrs:providers>
-	</jaxrs:server>
-	<cxf:bus>
-		<cxf:features>
-			<cxf:logging />
-		</cxf:features>
-	</cxf:bus>
-                
-	<bean id="baseDao"
-		class="org.mrobson.example.hibernatetx.cxfhibernate.persistence.dao.BaseDao">
-		<jpa:context unitname="cxfhibernate" property="entityManager" />
-		<tx:transaction method="*" value="Required" />
-	</bean>
-	<bean id="personService"
-		class="org.mrobson.example.hibernatetx.cxfhibernate.persistence.impl.PersonServiceImpl">
-		<property name="baseDao"  ref="baseDao"></property>
-		<tx:transaction method="*" value="Required" />
-	</bean>
-	<service ref="personService"
-		interface="org.mrobson.example.hibernatetx.cxfhibernate.persistence.PersonService" />
-		
-	<bean id="personRestService"
-		class="org.mrobson.example.hibernatetx.cxfhibernate.service.PersonRestService">
-		<property name="personService" ref="personService"></property>
-	</bean>
+    xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:camel="http://camel.apache.org/schema/blueprint"
+    xmlns:camel-cxf="http://camel.apache.org/schema/blueprint/cxf"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+    xmlns:cxf="http://cxf.apache.org/blueprint/core"
+    xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+    xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0"
+    xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+    <jaxrs:server address="/hibernates2i/" id="hibernates2i">
+        <jaxrs:serviceBeans>
+            <ref component-id="personRestService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean
+                class="org.mrobson.example.hibernates2i.cxfhibernate.exception.ApplicationExceptionHandler" id="applicationException"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <cxf:bus>
+        <cxf:features>
+            <cxf:logging/>
+        </cxf:features>
+    </cxf:bus>
+    <bean
+        class="org.mrobson.example.hibernates2i.cxfhibernate.persistence.dao.BaseDao" id="baseDao">
+        <jpa:context property="entityManager" unitname="cxfhibernates2i"/>
+        <tx:transaction method="*" value="Required"/>
+    </bean>
+    <bean
+        class="org.mrobson.example.hibernates2i.cxfhibernate.persistence.impl.PersonServiceImpl" id="personService">
+        <property name="baseDao" ref="baseDao"/>
+        <tx:transaction method="*" value="Required"/>
+    </bean>
+    <service id="service-c7404f54-9215-443b-9b15-48bce147d84f"
+        interface="org.mrobson.example.hibernates2i.cxfhibernate.persistence.PersonService" ref="personService"/>
+    <bean
+        class="org.mrobson.example.hibernates2i.cxfhibernate.service.PersonRestService" id="personRestService">
+        <property name="personService" ref="personService"/>
+    </bean>
 </blueprint>

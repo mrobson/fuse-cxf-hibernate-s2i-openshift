@@ -28,8 +28,8 @@ import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-import org.mrobson.example.hibernatetx.cxfhibernate.persistence.PersonService;
-import org.mrobson.example.hibernatetx.datamodel.Person;
+import org.mrobson.example.hibernates2i.cxfhibernate.persistence.PersonService;
+import org.mrobson.example.hibernates2i.datamodel.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

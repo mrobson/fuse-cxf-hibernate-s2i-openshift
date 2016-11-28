@@ -14,10 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mrobson.example.hibernatetx.cxfhibernate.persistence.impl;
+package org.mrobson.example.hibernates2i.cxfhibernate.persistence.impl;
 
-import org.mrobson.example.hibernatetx.cxfhibernate.persistence.dao.BaseDao;
-import org.mrobson.example.hibernatetx.cxfhibernate.persistence.dao.Dao;
+import org.mrobson.example.hibernates2i.cxfhibernate.persistence.dao.BaseDao;
+import org.mrobson.example.hibernates2i.cxfhibernate.persistence.dao.Dao;
 
 /**
  * @author <a href="mailto:mrobson@redhat.com">Matthew Robson</a>

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mrobson.example.hibernatetx.cxfhibernate.service;
+package org.mrobson.example.hibernates2i.cxfhibernate.service;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -28,9 +28,9 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.mrobson.example.hibernatetx.cxfhibernate.exception.ApplicationException;
-import org.mrobson.example.hibernatetx.cxfhibernate.persistence.PersonService;
-import org.mrobson.example.hibernatetx.datamodel.Person;
+import org.mrobson.example.hibernates2i.cxfhibernate.exception.ApplicationException;
+import org.mrobson.example.hibernates2i.cxfhibernate.persistence.PersonService;
+import org.mrobson.example.hibernates2i.datamodel.Person;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

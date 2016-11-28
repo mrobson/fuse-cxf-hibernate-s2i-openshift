@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mrobson.example.hibernatetx.cxfhibernate.persistence.dao;
+package org.mrobson.example.hibernates2i.cxfhibernate.persistence.dao;
 
 import javax.persistence.EntityManager;
 
 import org.apache.log4j.Logger;
-import org.mrobson.example.hibernatetx.datamodel.EntityCommons;
-import org.mrobson.example.hibernatetx.datamodel.Person;
+import org.mrobson.example.hibernates2i.datamodel.EntityCommons;
+import org.mrobson.example.hibernates2i.datamodel.Person;
 
 /**
  * @author <a href="mailto:mrobson@redhat.com">Matthew Robson</a>
