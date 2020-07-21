@@ -121,11 +121,55 @@
         "name": "${SERVICE_NAME}"
       },
       "spec": {
-        "clusterIP": "None",
-        "deprecatedPublicIPs": [],
         "ports": [
           {
-            "port": 9412,
+            "name": "8181-tcp",
+            "port": 8181,
+            "protocol": "TCP",
+            "targetPort": 8181
+          },
+          {
+            "name": "8443-tcp",
+            "port": 8443,
+            "protocol": "TCP",
+            "targetPort": 8443
+          },
+          {
+            "name": "9990-tcp",
+            "port": 9990,
+            "protocol": "TCP",
+            "targetPort": 9990
+          }
+        ],
+        "selector": {
+          "container": "karaf",
+          "project": "${APP_NAME}",
+          "component": "${APP_NAME}",
+          "provider": "s2i"
+        }
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "annotations": {
+        },
+        "labels": {
+          "container": "karaf",
+          "component": "${APP_NAME}",
+          "provider": "s2i",
+          "project": "${APP_NAME}",
+          "version": "${APP_VERSION}"
+        },
+        "name": "np-${SERVICE_NAME}"
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "8181-tcp",
+            "nodePort": 30030,
+            "port": 8181,
             "protocol": "TCP",
             "targetPort": 8181
           }
@@ -135,7 +179,8 @@
           "project": "${APP_NAME}",
           "component": "${APP_NAME}",
           "provider": "s2i"
-        }
+        },
+        "type": "NodePort"
       }
     },
     {
