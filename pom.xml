@@ -35,7 +35,7 @@
 		<maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
 		<maven-install-plugin.version>2.5.2</maven-install-plugin.version>
 		<maven-resources-plugin.version>2.5</maven-resources-plugin.version>
-		<build-helper-maven-plugin.version>1.5-redhat-1</build-helper-maven-plugin.version>
+		<build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
 		<fuse.version>6.3.0.redhat-187</fuse.version>
 		<fabric8.version>2.2.181</fabric8.version>
 		<fabric8.maven.plugin.version>3.2.4</fabric8.maven.plugin.version>
